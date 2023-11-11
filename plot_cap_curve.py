@@ -26,23 +26,19 @@ def _check_arrays(y, y_pred):
 
 def _check_parameters(title, xlabel, ylabel, savefig, fname):
     if title is not None and not isinstance(title, str):
-        raise TypeError("title must be a string or None; got {}."
-                        .format(title))
+        raise TypeError(f"title must be a string or None; got {title}.")
 
     if xlabel is not None and not isinstance(xlabel, str):
-        raise TypeError("xlabel must be a string or None; got {}."
-                        .format(xlabel))
+        raise TypeError(f"xlabel must be a string or None; got {xlabel}.")
 
     if ylabel is not None and not isinstance(ylabel, str):
-        raise TypeError("ylabel must be a string or None; got {}."
-                        .format(ylabel))
+        raise TypeError(f"ylabel must be a string or None; got {ylabel}.")
 
     if not isinstance(savefig, bool):
-        raise TypeError("savefig must be a boolean; got {}.".format(savefig))
+        raise TypeError(f"savefig must be a boolean; got {savefig}.")
 
     if fname is not None and not isinstance(fname, str):
-        raise TypeError("fname must be a string or None; got {}."
-                        .format(fname))
+        raise TypeError(f"fname must be a string or None; got {fname}.")
 
     if savefig is True and fname is None:
         raise ValueError("fname must be provided if savefig is True.")
